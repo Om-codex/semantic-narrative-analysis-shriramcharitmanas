@@ -77,7 +77,7 @@ This allows verses—not just words—to be compared meaningfully.
 - Transparent semantic behavior
 
 ## **System Architecture**
-┌──────────────┐
+``┌──────────────┐
 │ Raw Text     │
 │ (Kanda-wise) │
 └──────┬───────┘
@@ -117,10 +117,10 @@ This allows verses—not just words—to be compared meaningfully.
 ┌────────────────────┐
 │ Streamlit App       │
 │ (Interactive UI)    │
-└────────────────────┘
+└────────────────────┘``
 
 ## **📂 Repository Structure**
-ramcharitmanas_app/
+``ramcharitmanas_app/
 │
 ├── app.py                      # Streamlit application
 │
@@ -136,7 +136,7 @@ ramcharitmanas_app/
 │   ├── retrieval.py            # Semantic search functions
 │   └── explanation.py          # Narrative explanation logic
 │
-└── README.md
+└── README.md``
 
 ## **Models Used**
 
