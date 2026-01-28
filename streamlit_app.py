@@ -46,7 +46,7 @@ st.set_page_config(
 def load_resources():
     with st.spinner("Loading vector embeddings and model..."):
 
-        # 1. Load verse embeddings (single file → hf_hub_download is correct)
+        # 1. Load verse embeddings 
         emb_path = hf_hub_download(
             repo_id=DATASET_REPO,
             filename="embeddings/verse_embeddings_ft.npy",
@@ -54,7 +54,7 @@ def load_resources():
         )
         embeddings = np.load(emb_path, mmap_mode="r")
 
-        # 2. Load FastText model (MULTI-FILE → snapshot_download is mandatory)
+        # 2. Load FastText model
         snapshot_dir = snapshot_download(
             repo_id=DATASET_REPO,
             repo_type="dataset",
@@ -68,7 +68,7 @@ def load_resources():
         )
         ft_model = FastText.load(ft_model_path)
 
-        # 3. Load verses metadata
+       
         verses_path = hf_hub_download(
             repo_id=DATASET_REPO,
             filename="data/verses_metadata.json",
@@ -77,7 +77,7 @@ def load_resources():
         with open(verses_path, "r", encoding="utf-8") as f:
             verses = json.load(f)
 
-        # 4. Load kanda indices
+      
         kanda_path = hf_hub_download(
             repo_id=DATASET_REPO,
             filename="data/kanda_indices.json",
